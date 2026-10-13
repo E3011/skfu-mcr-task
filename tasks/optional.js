@@ -33,7 +33,7 @@ export const fibonacci = (index) => {
 */
 
 export const isFalsy = (value) => {
-    return !Boolean(value);
+    
 }
 
 /*
