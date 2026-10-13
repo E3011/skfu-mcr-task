@@ -8,7 +8,10 @@
 */
 
 export const helloWorld = () => {
+  const hiWorld = "Hello, World!";
 
+  console.log(hiWorld);
+  return hiWorld;
 }
 
 /*
@@ -22,7 +25,7 @@ export const getString = (str) => {
 
 /*
     task-02 напишите несколько функций для работы с массивами
-    1. getLength(arr)    возвращает длину 
+    1. getLength(arr)    возвращает длину
     2. getFirst(arr)     возвращает первый элемент
     3. getLast(arr)      возвращает последний элемент
     4. pushElement(arr, elem)  добавляет элемент в конец массива и возвращает массив
@@ -54,7 +57,7 @@ export const popElement = (arr) => {
     Используйте интерполяицию: https://code-basics.com/ru/languages/javascript/lessons/interpolation
     Используйте деструктуризацию: https://javascript.info/destructuring-assignment#object-destructuring
 
-    Свойства объекта: 
+    Свойства объекта:
     {
         animal: string,
         legs: number,
@@ -69,7 +72,7 @@ export const getAnimalDescription = (obj) => {
 }
 
 /*
-    task-04 Напишите две функции, которые принимают объект и возвращают ключи и значения объекта в виде массива 
+    task-04 Напишите две функции, которые принимают объект и возвращают ключи и значения объекта в виде массива
 */
 
 export const getObjKeys = (obj) => {
@@ -151,6 +154,3 @@ export const isStringArray = (arr) => {
 export const return2007 = (str) => {
 
 }
-
-
-
