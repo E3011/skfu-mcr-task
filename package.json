@@ -8,6 +8,7 @@
     "test": "node --test",
     "test:required": "node --test ./__test__/required.test.js",
     "test:optional": "node --test ./__test__/optional.test.js",
+    "test:example": "node --test ./__test__/example.test.js",
     "test:tap": "node --test --test-reporter=tap"
   },
   "engines": {
