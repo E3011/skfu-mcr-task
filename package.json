@@ -1,0 +1,16 @@
+{
+  "name": "skfu-mcr-task",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Учебный репозиторий с заданиями по JS",
+  "scripts": {
+    "test": "node --test",
+    "test:required": "node --test ./__test__/required.test.js",
+    "test:optional": "node --test ./__test__/optional.test.js",
+    "test:tap": "node --test --test-reporter=tap"
+  },
+  "engines": {
+    "node": ">=24.21.0"
+  }
+}

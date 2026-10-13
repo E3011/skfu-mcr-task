@@ -33,13 +33,13 @@ nvm install 24.21.0
 
 ```bash
 # Запуск тестов обязательных заданий
-node --test ./__test__/required.test.js
+npm run test:required
 
 # Запуск тестов опциональных заданий
-node --test ./__test__/optional.test.js
+npm run test:optional
 
 # Запуск всех тестов
-node --test
+npm test
 ```
 
 ## После выполнения обязательно ОТДЕЛЬНЫМ коммитом добавьте фаилы с выводом тестов
