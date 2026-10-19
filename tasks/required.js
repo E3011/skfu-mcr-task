@@ -20,7 +20,7 @@ export const helloWorld = () => {
 */
 
 export const getString = (str) => {
-
+  return str;
 }
 
 /*
@@ -33,24 +33,23 @@ export const getString = (str) => {
 */
 
 export const getLength = (arr) => {
-
+  return arr.length;
 }
 
 export const getFirst = (arr) => {
-
+  return arr[0];
 }
 
 export const getLast = (arr) => {
-
+  return arr[arr.length - 1];
 }
 
 export const pushElement = (arr, elem) => {
-
+  arr.push(elem);
+  return arr;
 }
 
-export const popElement = (arr) => {
-
-}
+export const popElement = (arr) => arr.pop();
 
 /*
     task-03 напишите функцию, которая принимает объект и склеивает из значений его свойст строку
@@ -68,7 +67,9 @@ export const popElement = (arr) => {
 */
 
 export const getAnimalDescription = (obj) => {
+  var str = `The ${obj.color} ${obj.animal} has ${obj.legs} legs`;
 
+  return str;
 }
 
 /*
@@ -76,11 +77,11 @@ export const getAnimalDescription = (obj) => {
 */
 
 export const getObjKeys = (obj) => {
-
+  return Object.keys(obj);
 }
 
 export const getObjValues = (obj) => {
-
+  return Object.values(obj);
 }
 
 /*
@@ -91,7 +92,7 @@ export const getObjValues = (obj) => {
 */
 
 export const patchObj = (obj, updates) => {
-
+  return { ...obj, ...updates };
 }
 
 /*
@@ -100,16 +101,16 @@ export const patchObj = (obj, updates) => {
     Если элемента нет в массиве просто возвращаем новую копию массива
 */
 
-export const deleteItem = (arr, item) => {
+export const deleteItem = (arr, item) =>
+  [ ...arr.filter((value) => value !== item) ];
 
-}
 
 /*
     task-07 Напишите функцию которая принимает массив чисел и возвращает новый массив где все числа умножены на 2
 */
 
 export const multiplyByTwo = (arr) => {
-
+  return arr.map((x) => x * 2);
 }
 
 /*
@@ -124,7 +125,16 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
+  var obj = { "2": 0, "3": 0, "4": 0, "5": 0 };
 
+  arr.forEach((err) => {
+    if (err == 10) obj["5"]++;
+    else if (err >= 8) obj["4"]++;
+    else if(err >= 5) obj["3"]++;
+    else obj["2"]++;
+  });
+
+  return obj;
 }
 
 /*
@@ -134,13 +144,11 @@ export const getAssessments = (arr) => {
     Для пустого массива isStringArray возвращает false
 */
 
-export const hasBoolean = (arr) => {
+export const hasBoolean = (arr) =>
+  arr.some((item) => typeof item === "boolean");
 
-}
-
-export const isStringArray = (arr) => {
-
-}
+export const isStringArray = (arr) =>
+  arr.length > 0 && arr.every((item) => typeof item === "string");
 
 /*
     task-10 Напишите функцию, которая принимает строку и возвращает измененную строку в эмо стиле
@@ -152,5 +160,8 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
-
+  return str.toLowerCase().split('')
+      .map((item) => item == "в" ? "ф" : item)
+      .map((item, index) => index % 2 == 0 ? item.toUpperCase() : item)
+      .join("") + ":*";
 }
