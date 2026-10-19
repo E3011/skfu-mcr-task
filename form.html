@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="style.css" rel="stylesheet" />
+        <title></title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <il class="title"><a href="index.html">Главное</a></il>
+
+                <il><a href="profile.html">Профель</a></il>
+                <il><a href="form.html">Aнкета</a></il>
+            </ul>
+        </nav>
+
+        <content>
+            <h1>Анкета для вступления в команду по олимпиадному программированию</h1>
+
+            <form>
+                <label for="name">Имя:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Введите имя"
+                    required
+                />
+
+                <label for="nickname">Прозвище или никнейм:</label>
+
+                <input
+                    type="text"
+                    id="nickname"
+                    name="nickname"
+                    placeholder="Например, CodeMaster"
+                />
+
+                <label for="favorite-word">Любимое слово на английском:</label>
+                <input type="text" id="favorite-word" name="favorite-word" />
+
+                <label for="email">Электронная почта:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@mail.com"
+                    required
+                />
+
+                <label for="password">Пароль:</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    minlength="6"
+                    required
+                />
+
+                <label for="age">Возраст:</label>
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="10"
+                    max=" hundert"
+                    required
+                />
+
+                <label for="books">Количество прочитанных за лето книг:</label>
+                <input
+                    type="number"
+                    id="books"
+                    name="books"
+                    min="0"
+                    max="100"
+                />
+
+                <label for="lucky-number">Счастливое число:</label>
+                <input type="number" id="lucky-number" name="lucky-number" />
+
+                <label for="birth-date">Дата рождения:</label>
+                <input type="date" id="birth-date" name="birth-date" required />
+
+                <label for="language">Любимый язык программирования:</label>
+                <select id="language" name="language">
+                    <option value="">Выберите язык</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="other">Другой</option>
+                </select>
+
+                <fieldset>
+                    <legend>Есть ли у вас опыт участия в олимпиадах?</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="experience"
+                            value="yes"
+                            required
+                        />
+                        Да, участвовал(а)
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience" value="no" />
+                        Нет, но хочу попробовать
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience" value="little" />
+                        Есть небольшой опыт
+                    </label>
+                </fieldset>
+
+                <label for="level">Ваш уровень подготовки:</label>
+                <select id="level" name="level">
+                    <option value="beginner">Начинающий</option>
+                    <option value="middle">Средний</option>
+                    <option value="advanced">Продвинутый</option>
+                </select>
+
+                <label for="about">Немного о себе:</label>
+                <br />
+                <textarea
+                    id="about"
+                    name="about"
+                    rows="6"
+                    cols="50"
+                    placeholder="Расскажите о своих интересах, целях и опыте..."
+                ></textarea>
+
+                <label>
+                    <input type="checkbox" name="agreement" required />
+                    Я согласен(на) на обработку персональных данных
+                </label>
+
+                <label>
+                    <input type="checkbox" name="notifications" />
+                    Я хочу получать информацию о тренировках и соревнованиях
+                </label>
+
+                <button type="submit">Отправить анкету</button>
+                <button type="reset">Очистить форму</button>
+            </form>
+        </content>
+    </body>
+</html>
